@@ -37,6 +37,9 @@ class TaskResponse(TaskCreate):
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
+@app.get("/version")
+def get_version():
+    return {"version": "0.1.0"}
 
 
 @app.get("/tasks", response_model=list[TaskResponse])

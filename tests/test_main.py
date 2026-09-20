@@ -12,6 +12,9 @@ from app.main import app  # noqa: E402
 def test_task_lifecycle():
     with TestClient(app) as client:
         assert client.get("/health").json() == {"status": "ok"}
+        version_response = client.get("/version")
+        assert version_response.status_code == 200
+        assert version_response.json() == {"version": "0.1.0"}
 
         created = client.post("/tasks", json={"title": "Learn Docker"})
         assert created.status_code == 201
