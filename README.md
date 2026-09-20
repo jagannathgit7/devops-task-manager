@@ -1,6 +1,7 @@
 # DevOps Task Manager
 
 A deliberately small API used to practice the entire DevOps lifecycle. Its job is to manage tasks; your job is to progressively build, ship, secure, observe, and operate it.
+CI status: GitHub Actions automatically tests this API and builds its Docker image.
 
 ## Milestone 1: run it locally
 
